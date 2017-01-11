@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="col-md-6 push-sm-2">
+    <form class="ng-untouched ng-pristine ng-valid" name="form1">
+      <div class="form-group">
+          <label for="input03">Device Name</label>
+          <input class="form-control" [(ngModel)]="deviceDetails.name" name="name" />
+          <!--<div>Current Value: {{deviceDetails.name}}</div>-->
+      </div>
+      <div class="form-group">
+          <label for="input03">IMEI Id</label>
+          <input class="form-control" [(ngModel)]="deviceDetails.email" name="email" />
+          <!--<div>Current Value: {{deviceDetails.email}}</div>-->
+      </div>
+      <div class="form-group">
+          <label for="input03">Desciption</label>
+          <input class="form-control" [(ngModel)]="deviceDetails.password" name="password" />
+          <!--<div>Current Value: {{deviceDetails.password}}</div>-->
+      </div>
+      <div class="form-group">
+          <label for="input03">Frequency</label>
+          <input class="form-control" [(ngModel)]="deviceDetails.confirmPwd" name="confirmPwd" />
+          <!--<div>Current Value: {{deviceDetails.confirmPwd}}</div>-->
+      </div>
+      <button style="float: right;" class="btn btn-danger" type="submit">Submit</button>
+    </form>
+    <br>
+    <!--<ba-card title="adddevice" baCardClass="with-scroll">
+      <ckeditor [(ngModel)]="adddeviceContent" [config]="config"></ckeditor>
+    </ba-card>-->
+  </div>
+</div>

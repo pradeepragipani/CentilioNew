@@ -1,0 +1,52 @@
+<div class="widgets">
+  <div class="row">
+    <div class="col-md-8 push-sm-2">
+      <!--<a style="float: right; margin-top: -20px;" href="/#/pages/device/adddevice" class="btn btn-danger" >Add Device</a> <br>-->
+      <!--<ba-card title="Condensed Table" baCardClass="with-scroll table-panel">
+        <condensed-table></condensed-table>
+      </ba-card>-->
+          <!--<label for="exampleSelect1">Device</label>-->
+          <!--<select class="form-control" id="exampleSelect1" (change)="onChange($event.target.value)">-->
+          <!--<select class="form-control" id="exampleSelect1">
+            <option *ngFor="let device of devices" [value]="{{device.uuid}}">{{device.name}}</option>
+          </select>-->
+          <label for="exampleSelect1">Device</label>
+          <select class="form-control" id="exampleSelect1">
+            <option *ngFor="let device of devices" value="{{device.uuid}}">{{device.name}}</option>
+          </select>
+    </div>
+  </div>
+  <br>
+  <!--<div class="row">
+    <div class="col-md-8 push-sm-3">
+      <button style="float: right;" class="btn btn-danger">Submit</button>
+    </div>
+  </div>-->
+  <br>
+  <div class="row">
+    <div class="col-md-4 push-sm-1"><h3>Device Details</h3></div>
+  </div>
+  <br>
+  <div *ngFor="let deviceInDetail of deviceById">
+    <div class="row">
+      <div class="col-md-4 push-sm-3">Name</div>
+      <div class="col-md-2 push-sm-1">:</div>
+      <div class="col-md-4">{{deviceInDetail.name}}</div>
+    </div> <br>
+    <div class="row">
+      <div class="col-md-4 push-sm-3">Latitude</div>
+      <div class="col-md-2 push-sm-1">:</div>
+      <div class="col-md-4">-17.8456</div>
+    </div> <br>
+    <div class="row">
+      <div class="col-md-4 push-sm-3">Longitude</div>
+      <div class="col-md-2 push-sm-1">:</div>
+      <div class="col-md-4">85.66894</div>
+    </div> <br>
+    <div class="row">
+      <div class="col-md-4 push-sm-3">Status</div>
+      <div class="col-md-2 push-sm-1">:</div>
+      <div class="col-md-4">{{deviceInDetail.status}}</div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,57 @@
+<form class="ng-untouched ng-pristine ng-valid" name="form1">
+  <div class="row">
+    <div class="col-md-4 push-sm-1">
+        <div class="form-group">
+            <label for="input03">First Name</label>
+            <input class="form-control" [(ngModel)]="userDetails.fname" name="fname" />
+            <!--<div>Current Value: {{userDetails.fname}}</div>-->
+        </div>
+        <div class="form-group">
+            <label for="input03">Last Name</label>
+            <input class="form-control" [(ngModel)]="userDetails.lname" name="lname" />
+            <!--<div>Current Value: {{userDetails.lname}}</div>-->
+        </div>
+        <div class="form-group">
+            <label for="input03">Email Id</label>
+            <input class="form-control" [(ngModel)]="userDetails.email" name="email" />
+            <!--<div>Current Value: {{userDetails.email}}</div>-->
+        </div>
+        <div class="form-group">
+            <label for="input03">Password</label>
+            <input type="password" class="form-control" [(ngModel)]="userDetails.password" name="password" />
+            <!--<div>Current Value: {{userDetails.password}}</div>-->
+        </div>
+        <!--<div class="form-group">
+            <label for="input03">Confirm Password</label>
+            <input type="password" class="form-control" [(ngModel)]="userDetails.confirmPwd" name="confirmPwd" />
+        </div>-->
+    </div>
+    <div class="col-md-4 push-sm-2">
+        <div _ngcontent-wqt-27="" class="form-group">
+          <label _ngcontent-wqt-27="" for="exampleSelect1">Role</label>
+          <select _ngcontent-wqt-27="" class="form-control" id="exampleSelect1">
+            <option _ngcontent-wqt-27="">Role 1</option>
+            <option _ngcontent-wqt-27="">Role 2</option>
+            <option _ngcontent-wqt-27="">Role 3</option>
+            <option _ngcontent-wqt-27="">Role 4</option>
+            <option _ngcontent-wqt-27="">Role 5</option>
+          </select>
+      </div>
+      <div _ngcontent-efd-27="" class="form-group">
+        <label _ngcontent-efd-27="" for="exampleSelect2">List of Devices</label>
+        <select _ngcontent-efd-27="" class="form-control" id="exampleSelect2" multiple="">
+          <option _ngcontent-efd-27="">Mobile</option>
+          <option _ngcontent-efd-27="">iPad</option>
+          <option _ngcontent-efd-27="">Laptop</option>
+          <option _ngcontent-efd-27="">Keys</option>
+        </select>
+      </div>
+      <button style="float: right;" class="btn btn-danger" type="submit">Submit</button>
+      
+      <br>
+      <!--<ba-card title="adduser" baCardClass="with-scroll">
+        <ckeditor [(ngModel)]="adduserContent" [config]="config"></ckeditor>
+      </ba-card>-->
+    </div>
+  </div>
+</form>
