@@ -35,10 +35,21 @@ export class LoginService {
          // ...using get request
          return this.http.get(this.mainUrl + 'login',  {headers: this.headers})
                         // ...and calling .json() on the response to return data
-                         .map((res: Response) => res.json())
+                         .map((res: Response) => {
+                             if(res.status < 200 || res.status >= 300) {
+                                 console.log("if");
+                                 
+                                throw new Error('This request has failed ' + res.status);
+                                } 
+                                // If everything went fine, return the response
+                                else {
+                                    console.log("else");
+                                    
+                                    return res.json();
+                                }
+                         })
                          //...errors if any
                          .catch(this.handleError);
-
      }handleError(error) {
         console.error(error);
         return Observable.throw(error.json().error || 'Server error');

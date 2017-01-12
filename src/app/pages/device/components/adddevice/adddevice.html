@@ -2,26 +2,21 @@
   <div class="col-md-6 push-sm-2">
     <form class="ng-untouched ng-pristine ng-valid" name="form1">
       <div class="form-group">
-          <label for="input03">Device Name</label>
-          <input class="form-control" [(ngModel)]="deviceDetails.name" name="name" />
-          <!--<div>Current Value: {{deviceDetails.name}}</div>-->
+          <label for="input03">Device Name Or IMEI</label>
+          <input class="form-control" [(ngModel)]="deviceDetails.name" name="name" placeholder="Device Name Or IMEI" required/>
       </div>
       <div class="form-group">
-          <label for="input03">IMEI Id</label>
-          <input class="form-control" [(ngModel)]="deviceDetails.email" name="email" />
-          <!--<div>Current Value: {{deviceDetails.email}}</div>-->
+          <label for="input03">Type</label>
+          <!--<input class="form-control" [(ngModel)]="deviceDetails.type" name="type" required/>-->
+          <select class="form-control" id="exampleSelect1">
+            <!--<option *ngFor="let device of devices" value="{{device.uuid}}">{{device.name}}</option>-->
+            <option value="0">Mobile</option>
+            <option value="1">Home Appliance</option>
+            <option value="2">Light</option>
+            <option value="3">Battery</option>
+          </select>
       </div>
-      <div class="form-group">
-          <label for="input03">Desciption</label>
-          <input class="form-control" [(ngModel)]="deviceDetails.password" name="password" />
-          <!--<div>Current Value: {{deviceDetails.password}}</div>-->
-      </div>
-      <div class="form-group">
-          <label for="input03">Frequency</label>
-          <input class="form-control" [(ngModel)]="deviceDetails.confirmPwd" name="confirmPwd" />
-          <!--<div>Current Value: {{deviceDetails.confirmPwd}}</div>-->
-      </div>
-      <button style="float: right;" class="btn btn-danger" type="submit">Submit</button>
+      <button style="float: right;" class="btn btn-danger" (click)="addDevice();" type="submit">Submit</button>
     </form>
     <br>
     <!--<ba-card title="adddevice" baCardClass="with-scroll">

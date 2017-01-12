@@ -5,12 +5,10 @@
       <!--<ba-card title="Condensed Table" baCardClass="with-scroll table-panel">
         <condensed-table></condensed-table>
       </ba-card>-->
-          <!--<label for="exampleSelect1">Device</label>-->
-          <!--<select class="form-control" id="exampleSelect1" (change)="onChange($event.target.value)">-->
-          <!--<select class="form-control" id="exampleSelect1">
+          <label for="exampleSelect1">Device</label>
+          <!--<select class="form-control" id="exampleSelect1" (change)="onChange($event.target.value)">
             <option *ngFor="let device of devices" [value]="{{device.uuid}}">{{device.name}}</option>
           </select>-->
-          <label for="exampleSelect1">Device</label>
           <select class="form-control" id="exampleSelect1">
             <option *ngFor="let device of devices" value="{{device.uuid}}">{{device.name}}</option>
           </select>

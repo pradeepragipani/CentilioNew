@@ -1,30 +1,22 @@
 <form class="ng-untouched ng-pristine ng-valid" name="form1">
   <div class="row">
     <div class="col-md-4 push-sm-1">
+      <div class="form-group">
+            <label for="input03">Corporate Name</label>
+            <input type="text" class="form-control" [(ngModel)]="userDetails.corporateName" name="corporateName" />
+        </div>
         <div class="form-group">
             <label for="input03">First Name</label>
-            <input class="form-control" [(ngModel)]="userDetails.fname" name="fname" />
-            <!--<div>Current Value: {{userDetails.fname}}</div>-->
+            <input class="form-control" [(ngModel)]="userDetails.firstName" name="firstName" />
         </div>
         <div class="form-group">
             <label for="input03">Last Name</label>
-            <input class="form-control" [(ngModel)]="userDetails.lname" name="lname" />
-            <!--<div>Current Value: {{userDetails.lname}}</div>-->
+            <input class="form-control" [(ngModel)]="userDetails.lastName" name="lastName" />
         </div>
         <div class="form-group">
-            <label for="input03">Email Id</label>
-            <input class="form-control" [(ngModel)]="userDetails.email" name="email" />
-            <!--<div>Current Value: {{userDetails.email}}</div>-->
+            <label for="input03">Type</label>
+            <input class="form-control" [(ngModel)]="userDetails.type" name="type" />
         </div>
-        <div class="form-group">
-            <label for="input03">Password</label>
-            <input type="password" class="form-control" [(ngModel)]="userDetails.password" name="password" />
-            <!--<div>Current Value: {{userDetails.password}}</div>-->
-        </div>
-        <!--<div class="form-group">
-            <label for="input03">Confirm Password</label>
-            <input type="password" class="form-control" [(ngModel)]="userDetails.confirmPwd" name="confirmPwd" />
-        </div>-->
     </div>
     <div class="col-md-4 push-sm-2">
         <div _ngcontent-wqt-27="" class="form-group">
@@ -46,12 +38,9 @@
           <option _ngcontent-efd-27="">Keys</option>
         </select>
       </div>
-      <button style="float: right;" class="btn btn-danger" type="submit">Submit</button>
+      <button style="float: right;" (click)="addUser()" class="btn btn-danger" type="submit">Submit</button>
       
       <br>
-      <!--<ba-card title="adduser" baCardClass="with-scroll">
-        <ckeditor [(ngModel)]="adduserContent" [config]="config"></ckeditor>
-      </ba-card>-->
     </div>
   </div>
 </form>
